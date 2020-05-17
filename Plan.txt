@@ -1,0 +1,47 @@
+Personal Book Library/Repo
+
+Technical Considerations:
+- Backend
+    - Channels (Chat)
+    - Scraper (Book information)
+    - v1 = Django renders HTML, v2 = Django is API for React front end
+
+
+class User(models.Model):
+Fname
+Lname
+email
+pass
+about_me 
+borrowing = ManyToMany(Book, rel_name="borrower")
+friends = MM(self)
+
+
+class Book(models.Model):
+Title
+Author
+Pub_date
+Desc
+Owner = ForeignKey(User, rel_name="library")
+Wished = ForeignKey(User, rel_name="wishlist")
+
+
+class Review(models.Model):
+review
+rating
+reviewed_book = ForeignKey(Book, rel_name="reviews")
+recommendation = MM(User, rel_name="recommended_books")
+
+
+
+Main features:
+- List of owned books
+- List of wanted books
+- Friend's List
+- Track who has borrowed which books and when
+
+Additional Features:
+- Chat
+- Web scraping for information
+- Rating
+- Search

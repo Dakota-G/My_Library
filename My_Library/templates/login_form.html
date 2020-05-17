@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Hello, Reader!</h1>
+        <p class="lead">Welcome to the <span class=font-weight-bold>My Library App</span>!</p>
+        <hr class="my-4">
+        <p class="lead">This is an app for readers!</p>
+        <p class="font-weight-light">A place to keep track of your books, share your share your library, and share your passion with friends</p>
+        <hr class="my-4">
+        <div class="row">
+        <div class="col-6">
+            <h4>Log in:</h4>
+            <div class="form-group">
+                <form action = "#" method="POST">
+                    <label for="email"> EMAIL:</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    <label for="password"> PASSWORD:</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <input type="submit" id="LOG IN" class="form-control">
+                </form>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <h4>Or Register a New Account:</h4>
+            <div class="form-group">
+                <form action ="#" method="POST">
+                    <label for="email">EMAIL:</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    <label for="first_name">FIRST NAME:</label>
+                        <input type="text" name="first_name" id="first_name" class="form-control">
+                    <label for="last_name">LAST NAME:</label>
+                        <input type="text" name="last_name" id="last_name" class="form-control">
+                    <label for="password">PASSWORD:</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    <label for="password_C">PASSWORD CONFIRMATION:</label>
+                        <input type="password_C" name="password_C" id="password_C" class="form-control">
+        
+                    <label for="about_me">TELL US SOMETHING ABOUT YOU:</label>
+                        <textarea name="about_me" id="about_me" class="form-control" value="About me">About Me</textarea>
+                        <input type="submit" id="REGISTER" class="form-control">
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

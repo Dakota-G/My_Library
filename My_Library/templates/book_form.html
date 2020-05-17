@@ -1,0 +1,29 @@
+{% extends 'profile_header.html' %}
+
+{% block content %}
+
+<div class="form-group">
+    <form action="#" method="POST">
+        <label for="title">TITLE:</label>
+            <input type="text" name="title" id="title" class="form-control">
+        <label for="author_first">AUTHOR'S FIRST NAME:</label>
+            <input type="text" name="author_first" id="author_first" class="form-control">
+        <label for="author_last">AUTHOR'S LAST NAME</label>
+            <input type="text" name="author_last" id="author_last" class="form-control">
+        <label for="genre">GENRE:</label>
+            <input type="text" name="genre" id="genre">
+        <label for="pub_date">PUBLICATION YEAR</label>    
+            <input type="number" name="pub_date" id="pub_date" class="form-control">
+        <label for="desc">DESCRIPTION:</label>
+            <textarea name="desc" id="desc"></textarea>
+        <label for="location">ADD TO LIBRARY OR WISHLIST?</label>
+            <label for="library">Library:</label>
+                <input type="radio" name="location" id="library" value="lib" class="form-control" checked>
+            <label for="wishlist">Wishlist:</label>
+                <input type="radio" name="location" id="wishlist" value="wish" class="form-control">
+        <label for="submit"> SUBMIT </label>
+            <input type="submit" name="submit" id="submit" class="form-control">
+    </form>
+</div>
+
+{% endblock %}

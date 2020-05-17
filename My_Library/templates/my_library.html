@@ -1,0 +1,35 @@
+{% extends 'profile_header.html' %}
+{% block content %}
+
+<table class="table table-dark table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"> Title </th>
+            <th scope="col"> Author </th>
+            <th scope="col"> Genre </th>
+            <th scope="col"> Publication Date </th>
+            <th scope="col"> Rating </th>
+        </tr>
+    </thead>
+    {% if user_library == True %}
+        {% for book in my_library %}
+        <tr>
+            <td scope="col">{{book.title}}</td>
+            <td scope="col">{{book.author}}</td>
+            <td scope="col">{{book.genre}}</td>
+            <td scope="col">{{book.pub_date}}</td>
+            <td scope="col">{{book.rating}}</td>
+        </tr>
+        {% endfor %}
+    {% elif user_library == False %}
+        <tr>
+            <td scope="col">EMPTY!</td>
+            <td scope="col">EMPTY!</td>
+            <td scope="col">EMPTY!</td>
+            <td scope="col">EMPTY!</td>
+            <td scope="col">EMPTY!</td>
+        </tr>
+    {% endif %}
+</table>
+
+{% endblock %}
